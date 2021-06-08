@@ -15,8 +15,6 @@ html { /*203deg*/
 
 	--white: 255,255,255;
 	--black: 0,0,0;
-
-	--hue-rotate: 0deg;
 }
 html.dark {
 	--acolor3: #C2E8FF;
@@ -293,13 +291,13 @@ html .avatar {
 
 html .stream-item {
 	border-bottom: 1px solid var(--acolor0) !important;
-	background-color: rgb(var(--white));
-}
-html .tweet-body {
-	min-height: 20px;
+	background-color: rgba(var(--white),.7) !important;
 }
 html .stream-item:nth-child(even) {
 	background-color: var(--ac0-Tra)!important;
+}
+html .tweet-body {
+	min-height: 20px;
 }
 
 html .prf-img img {
@@ -485,10 +483,10 @@ html .calweek a:hover {
 }
 
 html .column-panel, html .scroll-conversation, html .js-tweet-detail {
-	background-color: #0000;
+	background-color: #0000 !important;
+  backdrop-filter: blur(var(--blur));
 }
 html .js-app-columns-container {
-	background-image: url();
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;

@@ -272,11 +272,8 @@ html .activity-header {
 	border-bottom: 1px dashed var(--acolor1);
   margin-bottom: 5px;
 }
-html .activity-header:not(.has-source-avatar) div.txt-line-height--20 {
-  line-height: initial;
-}
-html .activity-header:not(.has-source-avatar) div.txt-line-height--20::after {
-  line-height: 20px;
+html .activity-header:not(.has-source-avatar) div {
+  line-height: normal;
 }
 html .activity-header:not(.has-source-avatar) div i {
   display: block;
@@ -401,6 +398,13 @@ html .media-item.is-invisible, html .media-image.is-invisible, html.dark .media-
 html .js-media-image-link, html .js-media-native-video, html .js-media-gif-container, .md-img-item {
   filter: hue-rotate(calc(-1 * var(--hue-rotate))) !important;
 }
+html .js-modal-panel.med-fullpanel {
+  background-color: #0005;
+}
+html .js-modal-context, html .settings-modal, html .open-modal {
+  background-color: rgba(var(--black),.5);
+  backdrop-filter: blur(2px);
+}
 
 html .sprite-verified-mini, html .icon-protected {
 	transform: translate(0,-1.5px);
@@ -477,8 +481,8 @@ html .calweek a:hover {
 	color: var(--acolor3) !important;
 }
 
-.column-panel, .scroll-conversation, .js-tweet-detail {
-	background-color: #0000!important;
+html .column-panel, html .scroll-conversation, html .js-tweet-detail {
+	background-color: #0000;
 }
 html .js-app-columns-container {
 	background-image: url();

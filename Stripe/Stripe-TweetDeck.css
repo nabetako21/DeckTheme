@@ -11,7 +11,7 @@ html { /*203deg*/
 	--white: 255,255,255;
 	--black: 0,0,0;
 
-	--hue-rotate: 0deg
+	--hue-rotate: 0deg;
 }
 html.dark {
 	--acolor3: #C2E8FF;
@@ -19,12 +19,12 @@ html.dark {
 	--acolor1: #64879D;
 	--acolor0: #40535E;
 
-	--ac3-Tra: #C2E8FF55;
-	--ac1-Tra: #64879D55;
-	--ac0-Tra: #40535E55;
-
 	--white: 21,32,43;
 	--black: 255,255,255;
+
+	--ac3-Tra: #C2E8FF55;
+	--ac1-Tra: #90C9EC55;
+	--ac0-Tra: #40535E55;
 }
 
 /* TweetDeck */
@@ -47,10 +47,8 @@ html .tweet-footer {
 	transition: 0.4s;
 }
 html .stream-item:hover {
-	background-color: rgba(var(--black),.01) !important;
-}
-html .stream-item:nth-child(even):hover {
-	background-color: rgba(var(--white),.3) !important;
+  background-color: #0000;
+	backdrop-filter: invert(5%);
 }
 html .emoji {
 	filter: hue-rotate(calc(-1 * var(--hue-rotate))) !important;
@@ -227,11 +225,8 @@ html .activity-header {
 	border-bottom: 1px dashed var(--acolor1);
   margin-bottom: 5px;
 }
-html .activity-header:not(.has-source-avatar) div.txt-line-height--20 {
-  line-height: initial;
-}
-html .activity-header:not(.has-source-avatar) div.txt-line-height--20::after {
-  line-height: 20px;
+html .activity-header:not(.has-source-avatar) div {
+  line-height: normal;
 }
 html .activity-header:not(.has-source-avatar) div i {
   display: block;
@@ -242,7 +237,6 @@ html .activity-header:not(.has-source-avatar) div i {
 html .has-source-avatar {
   margin: 0 0 2px !important;
 }
-
 html .avatar {
 	filter: hue-rotate(calc(-1 * var(--hue-rotate))) !important;
 }
@@ -357,6 +351,13 @@ html .media-item.is-invisible, html .media-image.is-invisible, html.dark .media-
 html .js-media-image-link, html .js-media-native-video, html .js-media-gif-container, .md-img-item {
   filter: hue-rotate(calc(-1 * var(--hue-rotate))) !important;
 }
+html .js-modal-panel.med-fullpanel {
+  background-color: #0005;
+}
+html .js-modal-context, html .settings-modal, html .open-modal {
+  background-color: rgba(var(--black),.5);
+  backdrop-filter: blur(2px);
+}
 
 html .sprite-verified-mini, html .icon-protected {
 	transform: translate(0,-1.5px);
@@ -433,8 +434,8 @@ html .calweek a:hover {
 	color: var(--acolor3) !important;
 }
 
-.column-panel, .scroll-conversation, .js-tweet-detail {
-	background-color: #0000 !important;
+html .column-panel, html .scroll-conversation, html .js-tweet-detail {
+	background-color: #0000;
 }
 html .js-app-columns-container {
 	background-image: url();

@@ -48,22 +48,23 @@
 	transition: 0.4s;
 }
 html .stream-item:hover, html.dark .stream-item:hover {
-	background-color: #8886 !important;
+	background-color: #0000;
+	backdrop-filter: invert(10%);
 }
 html .emoji {
 	filter: drop-shadow(0.2px 0 0 var(--kcolor1))
-	        drop-shadow(-0.2px 0 0 var(--kcolor1))
-	        drop-shadow(0 0.2px 0 var(--kcolor1))
-	        drop-shadow(0 -0.2px 0 var(--kcolor1));
+					drop-shadow(-0.2px 0 0 var(--kcolor1))
+					drop-shadow(0 0.2px 0 var(--kcolor1))
+					drop-shadow(0 -0.2px 0 var(--kcolor1));
 	transform: scale(1.1);
 }
 html.dark .spinner-small, html.dark .spinner-button-icon-spinner, html.dark .gap-chirp-spinner {
-  border: 2px #fff3 solid;
-  border-top: 2px var(--kcolor0) solid;
+	border: 2px #fff3 solid;
+	border-top: 2px var(--kcolor0) solid;
 }
 html .spinner-small, html .spinner-button-icon-spinner, html .gap-chirp-spinner {
-  border: 2px #0003 solid;
-  border-top: 2px var(--kcolor3) solid;
+	border: 2px #0003 solid;
+	border-top: 2px var(--kcolor3) solid;
 	width: 10px !important;
 	height: 10px !important;
 }
@@ -78,34 +79,34 @@ html .js-hide-drawer {
 	border-color: transparent !important;
 }
 /* html .js-column {
-  width:calc(50vw - 35px)!important;
-  width:calc(100vw - 70px)!important;
-  max-width:420px;
+	width:calc(50vw - 35px)!important;
+	width:calc(100vw - 70px)!important;
+	max-width:420px;
 } */
 
 /* common setting */
 .column-holder > .column-panel {
-  transition-property: transform, opacity;
-  transition-duration: 0.2s;
+	transition-property: transform, opacity;
+	transition-duration: 0.2s;
 }
 .is-shifted-1 > .column-holder,
 .is-shifted-2 > .column-holder {
-  transform: none !important;
+	transform: none !important;
 }
 .is-shifted-1 > .column-holder > .column-panel:first-child,
 .is-shifted-2 > .column-holder > .column-panel:first-child {
-  transform: scale(0.9);
-  opacity: 0;
+	transform: scale(0.9);
+	opacity: 0;
 }
 .is-shifted-1 > .column-holder > .column-panel:nth-child(2) {
-  transform: translateX(-100%);
+	transform: translateX(-100%);
 }
 .is-shifted-2 > .column-holder > .column-panel:nth-child(2) {
-  transform: translateX(-100%) scale(0.9);
-  opacity: 0;
+	transform: translateX(-100%) scale(0.9);
+	opacity: 0;
 }
 .is-shifted-2 > .column-holder > .column-panel:nth-child(3) {
-  transform: translateX(-200%);
+	transform: translateX(-200%);
 }
 
 html.dark .tweet-footer {
@@ -148,21 +149,21 @@ html body {
 .spinner-small, .spinner-button-icon-spinner, .gap-chirp-spinner {
 	background: none !important;
 	padding: 0 !important;
-  margin: 0 auto;
-  border-radius: 50% !important;
-  animation: sp-anime 1.0s infinite linear;
+	margin: 0 auto;
+	border-radius: 50% !important;
+	animation: sp-anime 1.0s infinite linear;
 }
 @keyframes sp-anime {
-  100% {
-    transform: rotate(360deg);
-  }
+	100% {
+		transform: rotate(360deg);
+	}
 }
 .med-embeditem {
-  background-image: url(https://cdn.discordapp.com/attachments/815596162055667724/836095601242406912/spin.gif)!important;
-  background-size: 7% !important;
+	background-image: url(https://cdn.discordapp.com/attachments/815596162055667724/836095601242406912/spin.gif)!important;
+	background-size: 7% !important;
 }
 .is-loaded {
-  background: none!important;
+	background: none!important;
 }
 
 html.dark .fullname, html.dark .pretty-link, html.dark .account-link, html.dark .link-complex, html.dark a:hover, html.dark .stat-word:hover {
@@ -212,10 +213,10 @@ html .btn-round, html .tweet-button, html .js-add-column, html .following-text, 
 }
 html .btn-round:focus,html .btn-round:active, html .tweet-button:focus, html .tweet-button:active, html .js-add-column:focus, html .js-add-column:active, html .following-text:focus, html .following-text:active, html #amPm:focus, html #amPm:active, html .btn-on-blue:focus, html .btn-on-blue:active, html .app-search-fake:focus, html .app-search-fake:active {
 	box-shadow: 0 0 0 2px var(--kcolor1) !important;
-  border-color: var(--kc0-Tra) !important;
+	border-color: var(--kc0-Tra) !important;
 }
 html .icon-twitter-blue-color {
-  color: var(--kc3-Tra) !important;
+	color: var(--kc3-Tra) !important;
 }
 
 html.dark .bg-color-twitter-blue,
@@ -265,32 +266,32 @@ html .js-column-header button {
 }
 
 html .tweet-context {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 html .tweet-context.padding-bs {
-  padding-bottom: 2px !important;
+	padding-bottom: 2px !important;
 }
 html .tweet-context div i, html.dark .tweet-context div i {
-  font-size: 12px !important;
-  margin-top: -1px !important;
+	font-size: 12px !important;
+	margin-top: -1px !important;
 }
 html .activity-header {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 html .activity-header:not(.has-source-avatar) div.txt-line-height--20 {
-  line-height: initial;
+	line-height: initial;
 }
 html .activity-header:not(.has-source-avatar) div.txt-line-height--20::after {
-  line-height: 20px;
+	line-height: 20px;
 }
 html .activity-header:not(.has-source-avatar) div i {
-  display: block;
-  float: right;
-  font-size: 12px !important;
-  padding-bottom: 1px !important;
+	display: block;
+	float: right;
+	font-size: 12px !important;
+	padding-bottom: 1px !important;
 }
 html .has-source-avatar {
-  margin: 0 0 2px !important;
+	margin: 0 0 2px !important;
 }
 
 html.dark .stream-item {
@@ -308,7 +309,7 @@ html .stream-item {
 	box-shadow: 0 0 5px 0 #0004;
 }
 html .tweet-body {
-  min-height: 20px;
+	min-height: 20px;
 }
 html.dark .tweet-avatar {
 	border-radius: 10% !important;
@@ -411,8 +412,8 @@ html .quoted-tweet {
 	border: transparent !important;
 }
 html .js-media-preview-container {
-  overflow: hidden;
-  border-radius: 14px;
+	overflow: hidden;
+	border-radius: 14px;
 }
 html.dark .media-sensitive {
 	background-color: #0008!important;
@@ -423,8 +424,8 @@ html .media-sensitive {
 	z-index: 5 !important;
 }
 html .media-item.is-invisible, html .media-image.is-invisible {
-  visibility: visible !important;
-  filter: blur(10px);
+	visibility: visible !important;
+	filter: blur(10px);
 }
 
 .sprite-verified, .sprite-verified-mini, .badge-verified::before {
@@ -536,11 +537,11 @@ html .lst .s-selected, html.dark .lst .s-selected {
 	background-color: var(--kc3-Tra);
 }
 html.dark .lst-modal {
-  background: #000a;
+	background: #000a;
 }
 html .lst-modal {
-  background: #fffa;
-  border: 0!important;
+	background: #fffa;
+	border: 0!important;
 }
 
 .cal header span {
@@ -589,12 +590,12 @@ html.dark .caldisabled {
 
 html .column-panel, html .scroll-conversation, html .js-tweet-detail {
 	background-color: #0000 !important;
+	backdrop-filter: blur(var(--blur));
 }
 html .js-app-columns-container {
-  background-image: url();
-  background-size: cover;
+	background-size: cover;
 	background-attachment: fixed;
-  background-position: center;
+	background-position: center;
 }
 html.dark .js-column, html.dark .column-message, html.dark .column-content, html.dark .column-options, html.dark .column-options .button-tray, html.dark .facet-type.is-active {
 	background-color: #0004 !important;
@@ -616,11 +617,11 @@ html .column-options .button-tray {
 	border-top: 1px solid #e1e8ed;
 }
 html .focus, html input:focus, html select:focus, html .js-reply-tweetbox:focus, html .is-selected.compose-account:focus .compose-account-img {
-  border-color: var(--kcolor2) !important;
-  box-shadow: inset 0 1px 3px #fff1,0 0 8px var(--kcolor2) !important;
+	border-color: var(--kcolor2) !important;
+	box-shadow: inset 0 1px 3px #fff1,0 0 8px var(--kcolor2) !important;
 }
 html button.btn-on-dark:focus, html input[type=button].btn-on-dark:focus {
-  box-shadow: 0 0 0 2px var(--kcolor4), 0 0 0 4px var(--kcolor1) !important;
+	box-shadow: 0 0 0 2px var(--kcolor4), 0 0 0 4px var(--kcolor1) !important;
 }
 html .FormInput {
 	background-color: #fff !important;

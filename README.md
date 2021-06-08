@@ -29,11 +29,7 @@ html.dark .js-app-columns-container {
   /* background-color: red !important; */
 }
 ```
-<<<<<<< HEAD
 ```CSS
-=======
-```
->>>>>>> 85c9dec5f8965d3a975320e21da8b2221583f359
 /* 背景をぼかす */
 :root { --blur: 5px }
 ```

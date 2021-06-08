@@ -20,14 +20,18 @@ PC向け公式Twitterクライアントである**TweetDeck**を、スマホで�
 ```CSS
 html .js-app-columns-container {
   background: hoge;
-  /* background-image: url("hoge.png"); */
+  /* background-image: url(hoge.png); */
   /* background-color: green !important; */
 }
 html.dark .js-app-columns-container {
   background: hogeDark;
-  /* background-image: url("hogeDark.jpg"); */
+  /* background-image: url(hogeDark.jpg); */
   /* background-color: red !important; */
 }
+```
+```
+/* 背景をぼかす */
+:root { --blur: 5px }
 ```
 
 * **ツイートアクションボタンを消す**<br>

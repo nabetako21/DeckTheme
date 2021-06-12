@@ -375,7 +375,7 @@ html .prf-header .sprite-verified, html .prf-header .icon-protected {
 }
 
 html .quoted-tweet {
-	color: rgba(var(--black),.75);
+	color: rgba(var(--black),.75) !important;
 	background-color: var(--ac1-Tra) !important;
 	border: transparent !important;
 }

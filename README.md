@@ -74,7 +74,7 @@ html .tweet-footer {
 * **TLの画像の高さを半分にする**<br>
 全体は自分で開いて確認するからTLを圧迫してほしくないというとき向け。<br>
 ```CSS
-html .media-preview, html .media-preview-container {
+html .media-preview:not(.detail-preview), html .media-preview:not(.detail-preview) > .media-preview-container {
   height: calc(153px / 2) !important;
   min-height: 0 !important;
 }

@@ -1,0 +1,1 @@
+const s=document.createElement("style");s.innerHTML="*{color:#fff}.f{background-color:#262626!important}i[style*='background-color']:not([style*='transparent']){background-color:hsla(206deg,50%,50%,.5)!important;color:#fff}";document.body.appendChild(s);

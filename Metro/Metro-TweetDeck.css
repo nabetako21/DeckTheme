@@ -1,0 +1,618 @@
+:root {
+	--ach: 206deg;
+}
+html { /*206deg*/
+	--l0: 80%;
+	--l1: 50%;
+	--l2: 25%;
+	--l3: 5%;
+	--white: 255,255,255;
+	--black: 0,0,0;
+}
+html.dark {
+	--l0: 5%;
+	--l1: 25%;
+	--l2: 50%;
+	--l3: 80%;
+	--white: 21,32,43;
+	--black: 255,255,255;
+}
+
+/* TweetDeck */
+html .scroll-styled-h, html .scroll-styled-v {
+	scrollbar-color: hsl(var(--ach),50%,var(--l1)) transparent !important;
+	scrollbar-width: thin;
+}
+html .stream-item:hover .tweet-footer {
+	opacity: 1;
+	transform: translate(5px,-8px);
+	transition: 0.2s;
+	z-index: 10;
+}
+html .tweet-footer {
+	bottom: -5px;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	transform: translate(5px,-8px);
+	transition: 0.4s;
+}
+/* html .emoji {
+	transform: scale(1.1);
+} */
+html .spinner-small, html .spinner-button-icon-spinner, html .gap-chirp-spinner {
+	border: 2px rgba(var(--white),.1) solid;
+	border-top: 2px hsl(var(--ach),50%,50%) solid;
+	width: 10px !important;
+	height: 10px !important;
+}
+/* html .js-column {
+	width:calc(50vw - 35px)!important;
+	width:calc(100vw - 70px)!important;
+	max-width:420px;
+} */
+
+/* common setting */
+time > a,
+.activity-header + .tweet.txt-mute > .tweet-body > p.tweet-text a {
+	pointer-events: none !important;
+}
+
+html .column-holder > .column-panel {
+	transition-property: transform, opacity;
+	transition-duration: 0.2s;
+}
+html .is-shifted-1 > .column-holder,
+html .is-shifted-2 > .column-holder {
+	transform: none !important;
+}
+html .is-shifted-1 > .column-holder > .column-panel:first-child,
+html .is-shifted-2 > .column-holder > .column-panel:first-child {
+	opacity: 0;
+}
+html .is-shifted-1 > .column-holder > .column-panel:nth-child(2) {
+	transform: translateX(-100%);
+}
+html .is-shifted-2 > .column-holder > .column-panel:nth-child(2) {
+	transform: translateX(-100%);
+	opacity: 0;
+}
+html .is-shifted-2 > .column-holder > .column-panel:nth-child(3) {
+	transform: translateX(-200%);
+}
+
+html .activity-header + .tweet.txt-mute > .tweet-header,
+html .activity-header + .tweet.txt-mute > .tweet-footer,
+html .activity-header + .tweet.txt-mute > .js-show-this-thread,
+html .activity-header + .tweet.txt-mute > .tweet-body .other-replies {
+	display: none !important;
+}
+html .app-header, html .column-nav-item, html .app-navigator, html .app-title {
+	background-color: rgb(var(--white)) !important;
+}
+
+html .js-column-header, html .column-header, html .mdl-header {
+	background-color: hsla(var(--ach),10%,5%,.8) !important;
+}
+html .mdl-header {
+	border-radius: 14px 14px 0 0;
+}
+
+html body {
+	background: linear-gradient(180deg,hsla(var(--ach),10%,5%,.8) 15%,#0000 15%,#0000 85%,hsl(var(--ach),10%,var(--l0)) 85%) !important;
+}
+html body::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	width: 80%;
+	height: 30%;
+	background: linear-gradient(135deg,hsla(var(--ach),10%,var(--l1),.5) 25%,#0000 25%,#0000 calc(100% - 25%),hsla(var(--ach),10%,var(--l1),.5) calc(100% - 25%)) !important;
+	opacity: 1;
+}
+html .js-app-loading {
+	background-image: url(https://cdn.discordapp.com/attachments/815596162055667724/843390426182189086/blue-spiner.gif)!important;
+	background-size: 20% !important;
+	background-repeat: no-repeat !important;
+	background-position:center;
+}
+html .spinner-centered {
+	display:none!important;
+}
+html .spinner-small, html .spinner-button-icon-spinner, html .gap-chirp-spinner {
+	background: none !important;
+	padding: 0 !important;
+	margin: 0 auto;
+	border-radius: 50% !important;
+	animation: sp-anime 1.0s infinite linear;
+}
+html .sprite-verified, html .sprite-verified-mini, html .badge-verified::before, html .prf-header .sprite-verified, html .tweetdeck-logo, html .js-app-loading, html .med-embeditem:not(.is-loaded) {
+	filter: hue-rotate(calc(var(--ach) - 206deg));
+}
+
+@keyframes sp-anime {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+html .med-embeditem {
+	background-image: url(https://cdn.discordapp.com/attachments/815596162055667724/843390426182189086/blue-spiner.gif)!important;
+	background-size: 7% !important;
+}
+html .is-loaded {
+	background: none!important;
+}
+
+html .color-twitter-white, html .js-compose-header .js-compose-close, html .compose-text-title, html .compose-title-text,
+html .column-heading, html .column-number, html .column-drag-handle, html .mdl-header-title,
+html .mdl-dismiss i::before, html .column-type-icon, html .column-number, .js-inline-compose-close i::before, .js-inline-compose-pop i::before, html .icon-compose-dm, html .icon-mark-read {
+	color: #fff !important;
+}
+html .media-sensitive a {
+	color: hsl(var(--ach),50%,var(--l0)) !important;
+}
+html .column-nav-updates, html .icon-follow {
+	color: hsl(var(--ach),50%,var(--l1)) !important;
+}
+html .tweet-action-item i, html .tweet-action-item span, html .tweet-detail-action-item i, html .tweet-detail-action-item span,
+html .js-show-this-thread p,
+html .fullname, html .pretty-link, html .account-link, html .link-complex, html a:hover, html .stat-word:hover,
+html .js-item-launch a i, html .lst-launcher a i, html ul.lst-launcher .js-item-launch.is-disabled a i, html ul.lst-launcher .js-item-launch.is-disabled:hover a i,
+html .tweet-context div i, html .activity-header div i,
+html .icon-small-valigned,
+html .med-flaglink, html .med-origlink, html .tweet-text a, html .prf-header a, html .account-bio a, html .Button--link:not(.full-width[type=button]) i, html .icon-medium, html .icon-minus, html .facet-subtitle, html .media-sensitive-title {
+	color: hsl(var(--ach),50%,var(--l2)) !important;
+}
+html .txt-link, html .txt-mute a, html .other-replies-link, html .js-typeahead-recent-search-clear, html .prf-stats a:hover strong, html button.btn-options-tray:hover, html .hide-condensed, html .username,
+html .column-title-back, html .column-title-items, html .column-title-container, html .js-menu-target, html .social-proof-names a, html .js-quoted-tweet-text a, html .conversation-more, html #caltitle {
+	color: hsl(var(--ach),50%,var(--l3)) !important;
+}
+html .column-title-back, html .js-tooltip-target {
+	color: hsl(var(--ach),50%,50%) !important;
+}
+
+html .tweet-header, html .tweet-header .nbfc > span {
+	height: 36px;
+	overflow: visible !important;
+}
+html .tweet-header .nbfc {
+	overflow: visible !important;
+}
+html .tweet-message .l-cell {
+	width: 100% !important;
+}
+html .account-inline {
+	vertical-align: end !important;
+}
+html .account-inline .icon-protected, .sprite-verified-mini {
+	position: absolute;
+	top: -5px;
+	left: -20px;
+	z-index: 1;
+	color: hsl(var(--ach),50%,50%) !important;
+	width: 20px;
+	height: 20px;
+	background-position: -10px -10px;
+	text-shadow: 1px 1px 0 #eee, 1px -1px 0 #eee, -1px -1px 0 #eee, -1px 1px 0 #eee !important;
+	opacity: .8;
+}
+html .account-link > .icon-protected {
+	position: absolute;
+	top: 2px;
+	left: 35px;
+	z-index: 1;
+	color: hsl(var(--ach),50%,50%) !important;
+	width: 20px;
+	height: 20px;
+	background-position: -10px -10px;
+	text-shadow: 1px 1px 0 #eee, 1px -1px 0 #eee, -1px -1px 0 #eee, -1px 1px 0 #eee !important;
+	opacity: .8;
+}
+html .account-summary-text, html .badge-verified {
+	overflow: visible !important;
+}
+html .badge-verified::before {
+	overflow: visible !important;
+	position: absolute;
+	top: -5px !important;
+	left: -20px !important;
+	z-index: 1;
+	width: 20px !important;
+	height: 20px !important;
+	background-position: -10px -10px !important;
+	opacity: .8;
+}
+html .quoted-tweet .account-inline .icon-protected, html .quoted-tweet .sprite-verified-mini {
+	top: 0;
+	left: auto;
+}
+html .username {
+	display: block;
+}
+html .tweet-body {
+	border-top: 2px solid hsla(var(--ach),10%,var(--l2),.5);
+	margin-left: -46px !important;
+	margin-top: 2px !important;
+}
+html .js-in-reply-to .tweet-body {
+	margin-left: 0 !important;
+}
+html .js-in-reply-to {
+	background-color: hsla(var(--ach),50%,var(--l0),.5) !important;
+	color: rgba(var(--black),.7) !important;
+}
+html .replyto-caret {
+	border-bottom-color: hsla(var(--ach),50%,var(--l0),.5) !important;
+}
+html .txt-mute:not(.txt-sub-antialiased) {
+	color: rgb(var(--black));
+}
+html .txt-sub-antialiased {
+	color: hsl(var(--ach),5%,50%) !important;
+}
+html .tweet-text {
+	margin: 5px 0 !important;
+}
+html .js-show-this-thread {
+	width: fit-content;
+	margin: -4px 0;
+	margin-left: -48px;
+	padding: 0 10px;
+	background: hsla(var(--ach),10%,var(--l1),.2);
+}
+html .js-show-this-thread p::before {
+	content: '　';
+	position: absolute;
+	left: 2px;
+	width: 3px;
+	background: hsla(var(--ach),50%,var(--l1),.7);
+	border-radius: 3px/7px;
+}
+html .other-replies {
+	margin-top: -2px;
+}
+html div.tweet-detail.margin-l--46, html .tweet-detail div.margin-l---46, html div.detail-view-inline.margin-l--46 {
+	margin-left: 0 !important;
+}
+
+html .action-text, html .js-header-action, html .js-back, html .js-dismiss-top-modal, html .Button--tertiary:not(.Button--danger) {
+	border-color: hsl(var(--ach),50%,var(--l1)) !important;
+	color: hsl(var(--ach),50%,var(--l1)) !important;
+}
+html .tweet-button, html .js-send-button, html .Button--primary,
+html .btn-round, html .js-add-column, html .following-text, html .btn-fav-faved-text, html .js-send, html .Button--primary:not(.js-send-button), html .full-width[type=button], html .compose-message-recipient, html #amPm {
+	color: #fff !important;
+	background-color: hsl(var(--ach),50%,var(--l1)) !important;
+	border-color: transparent !important;
+}
+html .js-action-header-button .icon-sliders, html .column-header-link .icon-sliders {
+	color: #fff !important;
+	background-color: hsl(var(--ach),50%,var(--l1)) !important;
+	border-color: transparent !important;
+	border-radius: 50%;
+	padding: 3px 5px 7px;
+}
+
+html .btn-round:focus,html .btn-round:active, html .tweet-button:focus, html .tweet-button:active, html .js-add-column:focus, html .js-add-column:active, html .following-text:focus, html .following-text:active, html #amPm:focus, html #amPm:active, html .btn-on-blue:focus, html .btn-on-blue:active, html .app-search-fake:focus, html .app-search-fake:active {
+	box-shadow: 0 0 0 2px hsl(var(--ach),50%,var(--l1)) !important;
+	border-color: hsla(var(--ach),50%,var(--l0),.3) !important;
+}
+html .icon-twitter-blue-color {
+	color: hsl(var(--ach),50%,var(--l1)) !important;
+}
+
+html .bg-color-twitter-blue {
+	background-color: hsl(var(--ach),50%,var(--l2)) !important;
+	border-color: rgba(var(--white),.3) !important;
+}
+html .unfollow-text, html .btn-fav-unfav-text, html .Button--danger {
+	color: rgb(var(--white)) !important;
+	background-color: hsl(var(--ach),50%,var(--l2)) !important;
+	border-color: transparent !important;
+}
+html .js-column-header button {
+	margin-bottom: 8px !important;
+}
+html .tweet-context.padding-bs {
+	padding-bottom: 2px !important;
+}
+html .js-tweet .tweet-context div i {
+	font-size: 12px !important;
+	margin-top: -1px !important;
+}
+html .activity-header:not(.has-source-avatar), html .tweet-context {
+	margin-bottom: 2px;
+	background: linear-gradient(135deg,hsla(var(--ach),10%,var(--l1),.5)18px,#0000 18px,#0000 calc(100% - 18px),hsla(var(--ach),10%,var(--l1),.5)calc(100% - 18px));
+}
+html .activity-header:not(.has-source-avatar) div.txt-line-height--20 {
+	line-height: initial !important;
+}
+html .activity-header:not(.has-source-avatar) div.txt-line-height--20::after {
+	line-height: 20px !important;
+}
+html .activity-header:not(.has-source-avatar) div i {
+	display: block;
+	float: right;
+	font-size: 12px !important;
+	padding-bottom: 1px !important;
+}
+html .has-source-avatar {
+	margin: 0 0 2px !important;
+}
+html .has-source-avatar > .item-img {
+	width: auto;
+}
+
+html .stream-item {
+	border-bottom: 5px solid hsl(var(--ach),10%,var(--l0)) !important;
+	background-color: rgba(var(--white),.6) !important;
+}
+html .tweet-body {
+	min-height: 20px;
+}
+
+html .prf-img img {
+	border-radius: 50% !important;
+	background: none !important;
+	border: 2px solid rgb(var(--white)) !important;
+}
+html .prf-img {
+	margin-top: 60px !important;
+}
+html .prf-header-inner-overlay {
+	border-top: 2px solid rgb(var(--white));
+	background-image: linear-gradient(rgba(var(--white),.6), rgb(var(--white))) !important;
+	height: calc(100% - 100px) !important;
+}
+html .prf-header {
+	text-align: left !important;
+	background-size: auto 100% !important;
+	background-position: bottom !important;
+	background-repeat: no-repeat !important;
+	background-color: transparent !important;
+	overflow: hidden;
+	z-index: 0;
+}
+html .prf-header::before {
+	content: '';
+	background: inherit;
+	background-size: auto calc(100% + 100px) !important;
+	filter: blur(5px);
+	background-position: bottom;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+html .modal-content .prf-header .width-p--85 {
+	width: 90% !important;
+}
+html .prf-header .fullname, html .prf-header .username {
+	font-weight: bold !important;
+}
+html .prf-bio {
+	border-top: 2px solid hsla(var(--ach),10%,var(--l2),.5);
+	text-align: left !important;
+	margin: 4px 0 !important;
+	padding: 6px 0 !important;
+	width: 100% !important;
+}
+html .prf-header .location, html .prf-header .js-show-tip {
+	display: block !important;
+	text-align: right !important;
+	margin: 0 !important;
+}
+html .prf-header, html .prf-header .username {
+	color: rgb(var(--black));
+	text-shadow: 1px 1px 0 rgba(var(--white),.5), 1px -1px 0 rgba(var(--white),.5), -1px -1px 0 rgba(var(--white),.5), -1px 1px 0 rgba(var(--white),.5) !important;
+}
+html .prf-header .emoji {
+	filter: drop-shadow(1px 1px 0 rgba(var(--white),.5)) drop-shadow(1px -1px 0 rgba(var(--white),.5)) drop-shadow(-1px -1px 0 rgba(var(--white),.5)) drop-shadow(-1px 1px 0 rgba(var(--white),.5));
+}
+html .prf-follow-status {
+	background-color: hsl(var(--ach),50%,var(--l1));
+	text-shadow: none !important;
+	border-radius: 10px;
+}
+html .prf-header .icon-protected {
+	color: hsl(var(--ach),50%,50%);
+	filter: drop-shadow(1px 1px 0 #fff8) drop-shadow(1px -1px 0 #fff8) drop-shadow(-1px -1px 0 #fff8) drop-shadow(-1px 1px 0 #fff8) !important;
+}
+html .prf-header .sprite-verified, html .prf-header .icon-protected {
+	position: absolute;
+	top: 115px;
+	right: 0;
+}
+
+html .quoted-tweet {
+	color: rgba(var(--black),.75) !important;
+	border: 0 !important;
+	border-left: 5px solid hsla(var(--ach),50%,var(--l1),.3) !important;
+	border-radius: 0 !important;
+	background-color: hsla(var(--ach),10%,var(--l1),.1);
+}
+html .quoted-tweet .media-size-medium, html .quoted-tweet .media-size-small {
+	border-radius: 0 !important;
+}
+html .js-media-preview-container {
+	overflow: hidden;
+}
+html .media-sensitive {
+	color: rgb(var(--white));
+	background-color: hsla(var(--ach),0%,var(--l3),.2) !important;
+	border-radius: 0 !important;
+	z-index: 5 !important;
+}
+html .js-media-preview-container .media-item.is-invisible, html .js-media-preview-container .media-image.is-invisible {
+	visibility: visible !important;
+	filter: blur(10px) !important;
+}
+html .media-item, html .tweet-detail .media-item
+, html .media-preview, html .tweet-detail .media-preview
+, html .js-media-native-video, html .js-media-gif-container, html .md-img-item {
+	border-radius: 0 !important;
+}
+
+html .js-modal-panel.med-fullpanel {
+	background-color: #0005;
+}
+html .js-modal-context, html .settings-modal, html .open-modal {
+	background-color: rgba(var(--black),.5);
+	backdrop-filter: blur(2px);
+}
+
+html .selected a:hover {
+	background-color: hsl(var(--ach),50%,var(--l1)) !important;
+	color: rgb(var(--white)) !important;
+}
+html .dropdown-menu .is-selected, html .list-item.is-selected, html .selected {
+	background-color: hsla(var(--ach),50%,var(--l3),.3) !important;
+}
+html .conversation-more {
+	min-height: 0 !important;
+	padding-left: 20px !important;
+}
+html .thread:not(.show-more-thread):not(.dot-thread):not(.cursor-top-thread) {
+	background: hsla(var(--ach),50%,var(--l1),.7) !important;
+	left: 2px;
+	margin-top: -10px !important;
+	height: calc(100% - 18px);
+	z-index: 2 !important;
+}
+html .dot-thread, .cursor-top-thread {
+	background: hsla(var(--ach),50%,var(--l1),.7) !important;
+	left: 2px !important;
+}
+html .show-more-thread {
+	height: 0 !important;
+}
+
+html .compose-account-selected {
+	background-color: rgb(var(--white)) !important;
+}
+html .compose-account-selected i {
+	color: hsl(var(--ach),50%,var(--l2)) !important;
+}
+
+html .stroke-twitter-light-gray {
+	stroke: hsla(var(--ach),50%,var(--l0),.3) !important;
+}
+html .stroke-twitter-blue {
+	stroke: hsl(var(--ach),50%,var(--l1)) !important;
+}
+html .js-hide-drawer {
+	color: hsl(var(--ach),50%,var(--l3)) !important;
+	background-color: hsl(var(--ach),50%,var(--l0)) !important;
+	border-color: transparent !important;
+}
+html .js-docked-compose, html .js-inline-reply, html .js-detail-view-inline, html .old-composer-footer {
+	background-color: hsl(var(--ach),0%,15%) !important;
+}
+html .reply-triangle {
+	border-bottom-color: hsl(var(--ach),0%,15%) !important;
+}
+html .app-search-input {
+	color: rgb(var(--black)) !important;
+	background-color: rgb(var(--white)) !important;
+}
+html .btn-on-blue {
+	background-color: hsl(var(--ach),50%,var(--l1)) !important;
+}
+html .compose-account-img {
+	background-color: transparent !important;
+}
+html .lst .s-selected {
+	background-color: hsla(var(--ach),50%,var(--l3),.3);
+}
+html .lst-modal {
+	background: rgba(var(--white),.6);
+	border: 0!important;
+}
+
+html .cal header span, .cal #caldays span {
+	color: rgb(var(--black)) !important;
+}
+html .cal #calbody, .cal #calbody div {
+	background-color: rgb(var(--white)) !important;
+	border-color: hsla(var(--ach),10%,var(--l2),.5) !important;
+}
+html .cal .calweek a:not(.caldisabled):not(.caloff) {
+	color: hsl(var(--ach),0%,var(--l3)) !important;
+	background-color: hsla(var(--ach),10%,var(--l0),.2);
+}
+html .cal .calweek a.caloff {
+	color: hsl(var(--ach),0%,var(--l1)) !important;
+}
+html .cal .calweek a.caldisabled {
+	color: hsl(var(--ach),0%,var(--l0)) !important;
+	background-color: #0000 !important;
+}
+html .cal .calweek a:hover:not(.caldisabled) {
+	background-color: hsla(var(--ach),50%,var(--l0),.5);
+	color: hsla(var(--ach),50%,var(--l3),.5) !important;
+}
+html .cal .calweek #calcurrent {
+	background-color: hsla(var(--ach),50%,var(--l1),.7) !important;
+}
+html .cal .calweek #caltoday {
+	background-color: hsla(var(--ach),50%,var(--l1),.3) !important;
+}
+
+html .column-panel, html .scroll-conversation, html .js-tweet-detail {
+	background-color: #0000 !important;
+  backdrop-filter: blur(var(--blur));
+}
+html .js-app-columns-container {
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+html .js-column, html .column-message, html .column-content, html .column-options, html .column-options .button-tray, html .facet-type.is-active {
+	background-color: rgba(var(--white),.25) !important;
+}
+html div[data-testid=trend] {
+	background-color: rgba(var(--white),.6) !important;
+	border-bottom: 5px solid hsl(var(--ach),10%,var(--l0)) !important;
+}
+html .column-options .button-tray {
+	background-color: #0000 !important;
+	border-top: 1px solid rgb(var(--white));
+}
+html .focus, html input:focus, html select:focus, html .js-reply-tweetbox:focus, html .is-selected.compose-account:focus .compose-account-img {
+	border-color: hsl(var(--ach),50%,var(--l2)) !important;
+	box-shadow: inset 0 1px 3px rgba(var(--white),.1),0 0 8px hsl(var(--ach),50%,var(--l2)) !important;
+}
+html button.btn-on-dark:focus, html input[type=button].btn-on-dark:focus {
+	box-shadow: 0 0 0 2px hsl(var(--ach),50%,var(--l0)), 0 0 0 4px hsl(var(--ach),50%,var(--l1)) !important;
+}
+html .FormInput {
+	background-color: rgb(var(--white)) !important;
+}
+html .DatePicker-monthButton {
+	color: hsl(var(--ach),50%,var(--l3)) !important;
+}
+html .DatePicker-monthButton:focus, html .DatePicker-monthButton:hover {
+	color: hsl(var(--ach),50%,var(--l3)) !important;
+	background-color: hsla(var(--ach),50%,var(--l0),.3) !important;
+}
+html .DatePicker-calendarDay.is-selectable:hover {
+	background-color: hsl(var(--ach),50%,var(--l3)) !important;
+}
+
+html body > div.application .bg-color-twitter-white:not(.column-content),
+html body > div.application .compose-text-container {
+	background-color: rgb(var(--white)) !important;
+	color: rgb(var(--black)) !important;
+}
+
+html .more-tweets-glow {
+	margin-top: -5px;
+	height: 0px !important;
+	border-top: 2px solid #fff !important;
+}

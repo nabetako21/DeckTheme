@@ -5,16 +5,20 @@
 ### MarinDeckとは
 PC向け公式Twitterクライアントである**TweetDeck**を、スマホで使いやすいようにレイアウトの最適化を行ったアプリです。中身はWebのTweetDeckなので**JSとCSSで見た目を好き勝手いじれます**。
 
-## Stripe
-ツイートの背景色がストライプなテーマです。<br>
-[詳細](https://github.com/nabetako21/DeckTheme/blob/main/Stripe/Stripe.md)
-
 ## Viper
 緑をアクセントカラーとする毒蛇なテーマです。<br>
 [詳細](https://github.com/nabetako21/DeckTheme/blob/main/Viper/Viper.md)
 
-## 拡張CSS
-カスタムCSSの欄に追記すると楽しい(?)設定（Stripe, Viper共通）<br>
+## Stripe
+ツイートの背景色がストライプなテーマです。<br>
+[詳細](https://github.com/nabetako21/DeckTheme/blob/main/Stripe/Stripe.md)
+
+## Metro
+ツイートの位置を少し変えたりしたシンプルオシャレ?なテーマです。<br>
+[詳細](https://github.com/nabetako21/DeckTheme/blob/main/Metro/Metro.md)
+
+## 拡張CSS（Viper, Stripe, Metro用）
+カスタムCSSの欄に追記すると楽しい(?)設定<br>
 
 * **背景の変更**
 ```CSS
@@ -34,13 +38,16 @@ html.dark .js-app-columns-container {
 :root { --blur: 5px }
 ```
 
+## 拡張CSS（他でも使える）
+その他自分がMarinDeck用に使っているカスタムCSS<br>
+
 * **ツイートアクションボタンを消す**<br>
 リプライ・リツイート・いいねのボタンらを消して情報量の増加と誤爆防止。<br>
 ```CSS
 html .tweet-actions {
   display:none !important;
 }
-/* アイコン分の高さを維持する（Stripe, Viperには記述済み） */
+/* アイコン分の高さを維持する（Viper, Stripe, Metroには記述済み） */
 html .tweet-body {
  min-height: 20px;
 }
